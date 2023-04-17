@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
-import { API } from "aws-amplify";
 import { API, Storage } from 'aws-amplify';
 import {
   Button,
@@ -13,6 +12,7 @@ import {
   View,
   withAuthenticator,
 } from '@aws-amplify/ui-react';
+
 import { listNotes } from "./graphql/queries";
 import {
   createNote as createNoteMutation,
@@ -70,8 +70,8 @@ const App = ({ signOut }) => {
     });
   }
 
+
   return (
-    
     <View className="App">
       <Heading level={1}>My Notes App</Heading>
       <View as="form" margin="3rem 0" onSubmit={createNote}>
@@ -131,7 +131,6 @@ const App = ({ signOut }) => {
       </View>
       <Button onClick={signOut}>Sign Out</Button>
     </View>
-    
   );
 };
 
