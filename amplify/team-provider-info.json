@@ -17,6 +17,9 @@
       },
       "api": {
         "amplifyapp": {}
+      },
+      "storage": {
+        "s32c8a8ae1": {}
       }
     }
   }
